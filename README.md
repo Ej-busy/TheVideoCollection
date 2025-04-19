@@ -10,7 +10,15 @@ This project has been updated to focus on user-created content only. It uses HTM
 
 The Video Collection includes options for creating a stable link that doesn't change, even when using the free version of ngrok:
 
-- **URL Shortener Method (Recommended):**
+- **Free Domain Name (Recommended):**
+  - Get a free domain name from Freenom.com (like yourdomain.tk)
+  - Point it to a GitHub Pages repository with a redirect page
+  - Update the redirect page when your ngrok URL changes
+  - Share your domain name with others
+  - To use this method, run `start-server-freenom.bat`
+  - For setup instructions, see [FREENOM_DOMAIN_SETUP.md](FREENOM_DOMAIN_SETUP.md)
+
+- **URL Shortener Method:**
   - Create a custom short link (e.g., rebrand.ly/my-videos)
   - The link automatically updates when your ngrok URL changes
   - Share this permanent link with others
@@ -164,10 +172,10 @@ const CONFIG = {
    - User sessions are persisted using localStorage
 
 5. **External Access via Stable Link**
-   - Share your permanent short link with others to let them access your Video Collection
-   - The link will look like: https://rebrand.ly/your-custom-name
+   - Share your permanent domain or short link with others to let them access your Video Collection
+   - The link will look like: https://yourdomain.tk or https://rebrand.ly/your-custom-name
    - This link will always work, even when your temporary ngrok URL changes
-   - To set up your permanent link, see [REBRANDLY_SETUP.md](REBRANDLY_SETUP.md)
+   - To set up your permanent domain, see [FREENOM_DOMAIN_SETUP.md](FREENOM_DOMAIN_SETUP.md)
    - All content is stored on your server (restarting will clear all content)
 
 ## Technical Details
